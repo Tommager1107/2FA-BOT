@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2FA BOT</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #34495e;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        #invite-section {
+            margin-top: 40px;
+        }
+
+        h1, h2 {
+            color: #ecf0f1;
+        }
+
+        p {
+            color: #bdc3c7;
+        }
+
+        a {
+            display: block;
+            margin-top: 10px;
+            padding: 10px;
+            text-align: center;
+            text-decoration: none;
+            color: #fff;
+            background-color: #3498db;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        a:hover {
+            background-color: #2980b9;
+        }
+
+        code {
+            color: #2ecc71;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>2FA │ Discord Bot</h1>
+        </header>
+        <section id="commands-section">
+            <h2>Available Commands</h2>
+            <code>!help</code> - View available commands and their descriptions.<br>
+            <code>!uptime</code> - Check how long the bot has been running.<br>
+            <code>!invite</code> - Get links to invite the bot with different permissions.
+        </section>
+        <section id="invite-section">
+            <h2>Invite the Bot</h2>
+            <p>Choose the permission level you want:</p>
+            <a href="https://discord.com/api/oauth2/authorize?client_id=1174047721414459413&permissions=8&scope=bot" target="_blank">Invite as Administrator</a>
+            <a href="https://discord.com/api/oauth2/authorize?client_id=1174047721414459413&permissions=70368744177655&scope=bot" target="_blank">Invite with Custom Permissions</a>
+        </section>
+    </div>
+</body>
+</html>
