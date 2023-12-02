@@ -78,6 +78,30 @@
             <a href="https://discord.com/api/oauth2/authorize?client_id=1174047721414459413&permissions=8&scope=bot" target="_blank">Invite as Administrator</a>
             <a href="https://discord.com/api/oauth2/authorize?client_id=1174047721414459413&permissions=70368744177655&scope=bot" target="_blank">Invite with Custom Permissions</a>
         </section>
+         <script>
+                // Replace YOUR_SERVER_ID with your actual server ID
+                const serverId = '1166770798938304636';
+                
+                // Discord Widget API URL
+                const widgetUrl = `https://discord.com/api/guilds/${serverId}/widget.json`;
+
+                // Fetch and display the widget
+                fetch(widgetUrl)
+                    .then(response => response.json())
+                    .then(data => {
+                        const embedContainer = document.getElementById('discord-embed');
+
+                        const embedFrame = document.createElement('iframe');
+                        embedFrame.src = `https://discord.com/widget?id=${serverId}&theme=dark`;
+                        embedFrame.width = '350';
+                        embedFrame.height = '500';
+                        embedFrame.allowtransparency = 'true';
+                        embedFrame.frameBorder = '0';
+
+                        embedContainer.appendChild(embedFrame);
+                    })
+                    .catch(error => console.error('Error fetching Discord widget:', error));
+            </script>
     </div>
 </body>
 </html>
